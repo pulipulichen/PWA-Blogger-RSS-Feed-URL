@@ -1,0 +1,32 @@
+<form class="ui form">
+
+  <div class="ui segment">
+    <div class="two fields">
+      <div class="field">
+        <label>
+          Blogger URL
+        </label>
+        <input type="text" v-model="bloggerURL" />
+      </div>
+    </div>
+
+  </div>
+  <div class="ui segment"
+       v-if="computedBaseURL">
+    <div class="ui grid">
+      <div class="twelve wide column">
+          <url-field 
+            v-for="item in computedLinks"
+            v-bind:label="item.label"
+            v-bind:url="item.url"></url-field>
+      </div>
+      <div class="four wide column">
+        <iframe name="test"></iframe>
+      </div>
+    </div>
+        
+
+  </div>
+  
+  
+</form>
